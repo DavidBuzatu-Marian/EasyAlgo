@@ -1,5 +1,11 @@
 .container {
   display: flex;
+  flex: 2;
+
+  &-body {
+    display: flex;
+    font-size: 2rem;
+  }
 
   .elements-bar {
     margin: 0 0.05rem;

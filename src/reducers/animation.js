@@ -3,11 +3,12 @@ import { SET_ANIMATION_STATE } from '../actions/types';
 const initialState = {
   animations: [],
   elements: [],
-  animationSpeed: 10,
-  isAnimating: false,
+  animationSpeed: 1,
+  isAnimated: false,
   isSorted: false,
   elementsSize: 0,
   sortType: 1,
+  sortMethod: 'Merge Sort',
   barWidth: 15,
 };
 

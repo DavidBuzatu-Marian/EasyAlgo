@@ -9,32 +9,79 @@ import { animateMergeSort } from '../../hooks/mergeSort';
 import { animateBubbleSort } from '../../hooks/bubbleSort';
 import { animateHeapSort } from '../../hooks/heapSort';
 import { animateInsertionSort } from '../../hooks/insertionSort';
+import {
+  BUBBLE_SORT,
+  HEAP_SORT,
+  INSERTION_SORT,
+  MERGE_SORT,
+  QUICK_SORT,
+} from '../utils/Constants';
 
 const Canvas = ({ animation, setAnimationState }) => {
   const [canvasState, setCanvasState] = useState({
     timeoutArr: [],
   });
 
-  const { elements, isSorted, barWidth, elementsSize } = animation;
+  const { elements, isSorted, barWidth, elementsSize, sortMethod } = animation;
   const { timeoutArr } = canvasState;
 
-  useEffect(() => {
-    let elements = initArr(100);
+  // useEffect(() => {
+  //   let elements = initArr(100);
 
-    setAnimationState({
-      elements,
-      isSorted: false,
-      isAnimating: false,
-      elementsSize: 100,
-    });
-  }, [setAnimationState]);
+  //   setAnimationState({
+  //     elements,
+  //     isSorted: false,
+  //     isAnimating: false,
+  //     elementsSize: 100,
+  //   });
+  // }, [setAnimationState]);
 
   useEffect(() => {
     if (elementsSize > 0) {
-      animateInsertionSort(canvasState, setCanvasState, timeoutArr, animation);
+      switch (sortMethod) {
+        case MERGE_SORT:
+          animateMergeSort(canvasState, setCanvasState, timeoutArr, animation);
+          break;
+        case HEAP_SORT:
+          animateHeapSort(canvasState, setCanvasState, timeoutArr, animation);
+          break;
+        case QUICK_SORT:
+          animateQuickSort(canvasState, setCanvasState, timeoutArr, animation);
+          break;
+        case BUBBLE_SORT:
+          animateBubbleSort(canvasState, setCanvasState, timeoutArr, animation);
+          break;
+        case INSERTION_SORT:
+          animateInsertionSort(
+            canvasState,
+            setCanvasState,
+            timeoutArr,
+            animation
+          );
+          break;
+        default:
+          animateMergeSort(canvasState, setCanvasState, timeoutArr, animation);
+      }
+    } else {
+      clearAllTimeouts();
+      let elements = initArr(100);
+
+      setAnimationState({
+        elements,
+        isSorted: false,
+        isAnimating: false,
+        elementsSize: 100,
+      });
     }
     // eslint-disable-next-line
   }, [elementsSize]);
+
+  const clearAllTimeouts = () => {
+    while (timeoutArr.length > 0) {
+      clearTimeout(timeoutArr.pop());
+    }
+    setCanvasState({ timeoutArr: [] });
+  };
 
   return elements.map((value, idx) => (
     <div

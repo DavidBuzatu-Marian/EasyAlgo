@@ -28,8 +28,7 @@ export const animateBubbleSort = (
       { animations, auxiliaryArray, animationSpeed, animationsLength },
       i,
       nrTimeout++,
-      timeoutArr,
-      true
+      timeoutArr
     );
   }
 };

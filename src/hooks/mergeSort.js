@@ -58,7 +58,7 @@ export const animateMergeSort = (
             if (nrTimeout === animationsLength) {
               store.dispatch(
                 setAnimationState({
-                  isAnimating: false,
+                  isAnimated: false,
                   elements: auxiliaryArray,
                   isSorted: true,
                 })
