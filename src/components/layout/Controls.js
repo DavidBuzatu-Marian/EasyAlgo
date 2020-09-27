@@ -27,7 +27,9 @@ const Controls = ({
       </div>
 
       <button
-        onClick={(e) => setAnimationState({ start: true })}
+        onClick={(e) =>
+          setAnimationState({ start: true, elementsSize: 0, animations: [] })
+        }
         disabled={isAnimated}
       >
         Start sort!

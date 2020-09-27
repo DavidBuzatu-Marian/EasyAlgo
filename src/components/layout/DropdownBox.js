@@ -3,8 +3,11 @@ import { ChevronDownIcon, ChevronUpIcon } from '@primer/octicons-react';
 import { setAnimationState } from '../../actions/animation';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setBitsState } from '../../actions/bitsAnimation';
 
 const DropdownBox = ({
+  link,
   sortingType,
   submenu,
   setAnimationState,
@@ -19,14 +22,16 @@ const DropdownBox = ({
   return (
     <div className='navbar-dropdown'>
       <div className='navbar-dropdown-header'>
-        <button onClick={(e) => setDropDownState({ toggle: !toggle })}>
-          {sortingType}
-          {toggle ? (
-            <ChevronUpIcon size={16} verticalAlign='middle' />
-          ) : (
-            <ChevronDownIcon size={16} verticalAlign='middle' />
-          )}
-        </button>{' '}
+        <Link to={link}>
+          <button onClick={(e) => setDropDownState({ toggle: !toggle })}>
+            {sortingType}
+            {toggle ? (
+              <ChevronUpIcon size={16} verticalAlign='middle' />
+            ) : (
+              <ChevronDownIcon size={16} verticalAlign='middle' />
+            )}
+          </button>{' '}
+        </Link>
       </div>
       {toggle && (
         <div className='navbar-dropdown-content'>
@@ -35,12 +40,19 @@ const DropdownBox = ({
               disabled={isAnimated}
               key={idx}
               onClick={(e) =>
-                setAnimationState({
-                  sortMethod: menu,
-                  elementsSize: 0,
-                  animations: [],
-                  start: true,
-                })
+                sortingType !== 'Binary Sorts'
+                  ? setAnimationState({
+                      sortMethod: menu,
+                      elementsSize: 0,
+                      animations: [],
+                      start: true,
+                    })
+                  : setBitsState({
+                      sortMethod: menu,
+                      elementsSize: 0,
+                      animations: [],
+                      start: true,
+                    })
               }
             >
               {menu}

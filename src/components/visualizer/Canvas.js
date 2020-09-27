@@ -65,7 +65,7 @@ const Canvas = ({ animation, setAnimationState }) => {
       setAnimationState({
         elements,
         isSorted: false,
-        isAnimating: false,
+        isAnimated: false,
         elementsSize: 100,
       });
     }
