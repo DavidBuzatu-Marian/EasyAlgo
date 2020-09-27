@@ -1,17 +1,25 @@
-import {SET_ANIMATION_STATE} from '../actions/types'
-
+import { SET_ANIMATION_STATE } from '../actions/types';
 
 const initialState = {
-    animations: [],
-    elements:[],
-    animationSpeed: 1,
-    isAnimating:false,
-     isSorted:false,
-      elementsSize: 0, sortType: 1
+  animations: [],
+  elements: [],
+  animationSpeed: 1,
+  isAnimating: false,
+  isSorted: false,
+  elementsSize: 0,
+  sortType: 1,
+};
 
-}
+export default function (state = initialState, action) {
+  const { type, payload } = action;
 
-
-export default function(state = initialState, action) {
-
+  switch (type) {
+    case SET_ANIMATION_STATE:
+      return {
+        ...state,
+        ...payload,
+      };
+    default:
+      return state;
+  }
 }
