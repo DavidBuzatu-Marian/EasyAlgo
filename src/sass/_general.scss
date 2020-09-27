@@ -9,6 +9,41 @@
   height: 100vh;
   margin: 0 1rem;
 
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    .table {
+      flex: 0 0 50%;
+      max-width: 50%;
+      .array-binary {
+        flex-grow: 0;
+        text-align: center;
+        letter-spacing: 2rem;
+        justify-content: center;
+
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+    table {
+      background-color: #345259;
+      font-size: 1.25rem;
+      text-align: center;
+      width: 100%;
+
+      th {
+        text-align: center;
+        padding: 1rem;
+        background-color: #37748c;
+        color: white;
+      }
+    }
+  }
+
   &-body {
     display: flex;
     font-size: 2rem;
