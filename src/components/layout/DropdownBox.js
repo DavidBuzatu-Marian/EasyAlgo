@@ -14,6 +14,7 @@ const DropdownBox = ({
   setAnimationState,
   animation: { isAnimated },
   setBitsState,
+  bitsAnimation,
 }) => {
   const [dropDownState, setDropDownState] = useState({
     toggle: false,
@@ -39,7 +40,7 @@ const DropdownBox = ({
         <div className='navbar-dropdown-content'>
           {submenu.map((menu, idx) => (
             <button
-              disabled={isAnimated}
+              disabled={isAnimated || bitsAnimation.isAnimated}
               key={idx}
               onClick={(e) =>
                 sortingType !== BINARY_TYPE
@@ -71,10 +72,13 @@ DropdownBox.propTypes = {
   submenu: PropTypes.array.isRequired,
   setAnimationState: PropTypes.func.isRequired,
   setBitsState: PropTypes.func.isRequired,
+  animation: PropTypes.object.isRequired,
+  bitsAnimation: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   animation: state.animation,
+  bitsAnimation: state.bitsAnimation,
 });
 
 export default connect(mapStateToProps, { setAnimationState, setBitsState })(
