@@ -5,6 +5,7 @@ import { initArr } from '../../hooks/initArr';
 import { setAnimationState } from '../../actions/animation';
 import { SORTED_COLOR, PRIMARY_COLOR } from '../../hooks/colors';
 import { animateQuickSort } from '../../hooks/quickSort';
+import { animateMergeSort } from '../../hooks/mergeSort';
 
 const Canvas = ({ animation, setAnimationState }) => {
   const [canvasState, setCanvasState] = useState({
@@ -27,8 +28,9 @@ const Canvas = ({ animation, setAnimationState }) => {
 
   useEffect(() => {
     if (elementsSize > 0) {
-      animateQuickSort(canvasState, setCanvasState, timeoutArr, animation);
+      animateMergeSort(canvasState, setCanvasState, timeoutArr, animation);
     }
+    // eslint-disable-next-line
   }, [elementsSize]);
 
   return elements.map((value, idx) => (
