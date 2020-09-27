@@ -1,6 +1,6 @@
-export const SORTED_COLOR = '#F2B591';
-export const PRIMARY_COLOR = '#05A6A5';
-export const PIVOT_COLOR = '#33ff33';
-export const SECONDARY_COLOR = '#005959';
-export const BIT_COLOR = '#ff33ff';
+export const SORTED_COLOR = '#FFBE67';
+export const PRIMARY_COLOR = '#A0D9CB';
+export const PIVOT_COLOR = '#FF6666';
+export const SECONDARY_COLOR = '#FFF8C9';
+export const BIT_COLOR = '#7D666E';
 // '#005959', '#05A6A5'

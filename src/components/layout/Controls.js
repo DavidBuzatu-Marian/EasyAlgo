@@ -12,7 +12,7 @@ const Controls = ({
   };
 
   return (
-    <div>
+    <div className='mb-3'>
       <div className='form-group'>
         <label htmlFor='animationSpeed'>AnimationSpeed (in ms)</label>
         <input
@@ -32,7 +32,7 @@ const Controls = ({
         }
         disabled={isAnimated}
       >
-        Start sort!
+        Start sort
       </button>
     </div>
   );
