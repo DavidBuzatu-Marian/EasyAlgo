@@ -8,6 +8,7 @@ const initialState = {
   isSorted: false,
   elementsSize: 0,
   sortType: 1,
+  barWidth: 15,
 };
 
 export default function (state = initialState, action) {
