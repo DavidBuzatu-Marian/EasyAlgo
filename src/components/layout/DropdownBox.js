@@ -39,6 +39,7 @@ const DropdownBox = ({
                   sortMethod: menu,
                   elementsSize: 0,
                   animations: [],
+                  start: true,
                 })
               }
             >

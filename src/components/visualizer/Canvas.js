@@ -22,22 +22,18 @@ const Canvas = ({ animation, setAnimationState }) => {
     timeoutArr: [],
   });
 
-  const { elements, isSorted, barWidth, elementsSize, sortMethod } = animation;
+  const {
+    elements,
+    isSorted,
+    barWidth,
+    elementsSize,
+    sortMethod,
+    start,
+  } = animation;
   const { timeoutArr } = canvasState;
 
-  // useEffect(() => {
-  //   let elements = initArr(100);
-
-  //   setAnimationState({
-  //     elements,
-  //     isSorted: false,
-  //     isAnimating: false,
-  //     elementsSize: 100,
-  //   });
-  // }, [setAnimationState]);
-
   useEffect(() => {
-    if (elementsSize > 0) {
+    if (start && elementsSize > 0) {
       switch (sortMethod) {
         case MERGE_SORT:
           animateMergeSort(canvasState, setCanvasState, timeoutArr, animation);
@@ -74,7 +70,7 @@ const Canvas = ({ animation, setAnimationState }) => {
       });
     }
     // eslint-disable-next-line
-  }, [elementsSize]);
+  }, [elementsSize, start]);
 
   const clearAllTimeouts = () => {
     while (timeoutArr.length > 0) {

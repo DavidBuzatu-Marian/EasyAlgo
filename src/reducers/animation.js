@@ -1,4 +1,5 @@
 import { SET_ANIMATION_STATE } from '../actions/types';
+import { MERGE_SORT } from '../components/utils/Constants';
 
 const initialState = {
   animations: [],
@@ -8,7 +9,8 @@ const initialState = {
   isSorted: false,
   elementsSize: 0,
   sortType: 1,
-  sortMethod: 'Merge Sort',
+  sortMethod: MERGE_SORT,
+  start: false,
   barWidth: 15,
 };
 
