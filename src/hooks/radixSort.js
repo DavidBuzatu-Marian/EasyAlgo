@@ -38,6 +38,7 @@ export const animateRadixSort = (
               nameOrIndexJ
             )[0];
             const BitStyleJ = arrayIndividualBitsJ.style;
+
             const colorBitsI = i % 2 === 0 ? BIT_COLOR : PRIMARY_COLOR;
             const colorBitsJ = i % 2 === 0 ? BIT_COLOR : PRIMARY_COLOR;
             nrTimeout++;
@@ -52,8 +53,8 @@ export const animateRadixSort = (
         timeoutArr: [
           ...timeoutArr,
           setTimeout(() => {
-            const arrayBits = document.getElementsByClassName('array-binary');
             nrTimeout++;
+            const arrayBits = document.getElementsByClassName('array-binary');
             const Number2Div = document.getElementsByName(nameOrIndex)[0];
             const Number1Div = arrayBits[NumberIdx];
             const Number2DivName = Number2Div.getAttribute('name');

@@ -4,7 +4,7 @@ import { RADIX_SORT } from '../components/utils/Constants';
 const initialState = {
   animations: [],
   elements: [],
-  animationSpeed: 10,
+  animationSpeed: 100,
   isAnimated: false,
   isSorted: false,
   elementsSize: 0,

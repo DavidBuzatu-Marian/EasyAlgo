@@ -7,7 +7,7 @@ import { PRIMARY_COLOR, SORTED_COLOR } from '../../hooks/colors';
 import { setBitsState } from '../../actions/bitsAnimation';
 import { animateRadixSort } from '../../hooks/radixSort';
 
-const Table = ({ bitsAnimation }) => {
+const Table = ({ bitsAnimation, setBitsState }) => {
   let { elements, sortMethod, isSorted, start, elementsSize } = bitsAnimation;
 
   const [tableState, setTableState] = useState({
@@ -28,6 +28,7 @@ const Table = ({ bitsAnimation }) => {
           );
           break;
         default:
+          break;
       }
     } else {
       clearAllTimeouts();
@@ -49,10 +50,8 @@ const Table = ({ bitsAnimation }) => {
     setTableState({ timeoutArr: [] });
   };
 
-  console.log(elements);
-
   return (
-    <div className='container'>
+    <div className='container-bits'>
       {sortMethod === RADIX_SORT ? (
         elements.map((value, idx) => (
           <div
@@ -126,4 +125,4 @@ const mapStateToProps = (state) => ({
   bitsAnimation: state.bitsAnimation,
 });
 
-export default connect(mapStateToProps)(Table);
+export default connect(mapStateToProps, { setBitsState })(Table);

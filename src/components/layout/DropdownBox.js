@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setBitsState } from '../../actions/bitsAnimation';
+import { BINARY_TYPE } from '../utils/Constants';
 
 const DropdownBox = ({
   link,
@@ -12,6 +13,7 @@ const DropdownBox = ({
   submenu,
   setAnimationState,
   animation: { isAnimated },
+  setBitsState,
 }) => {
   const [dropDownState, setDropDownState] = useState({
     toggle: false,
@@ -40,7 +42,7 @@ const DropdownBox = ({
               disabled={isAnimated}
               key={idx}
               onClick={(e) =>
-                sortingType !== 'Binary Sorts'
+                sortingType !== BINARY_TYPE
                   ? setAnimationState({
                       sortMethod: menu,
                       elementsSize: 0,
@@ -68,10 +70,13 @@ DropdownBox.propTypes = {
   sortingType: PropTypes.string.isRequired,
   submenu: PropTypes.array.isRequired,
   setAnimationState: PropTypes.func.isRequired,
+  setBitsState: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   animation: state.animation,
 });
 
-export default connect(mapStateToProps, { setAnimationState })(DropdownBox);
+export default connect(mapStateToProps, { setAnimationState, setBitsState })(
+  DropdownBox
+);

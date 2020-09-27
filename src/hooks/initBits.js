@@ -17,15 +17,14 @@ export const createBitDivs = (bits, isSorted) => {
     ps.push(
       <p
         key={keys++}
-        name={bits + this.pad(bit, keys)}
+        name={bits + pad(bit, keys)}
         className='col-2 bits'
         style={{
-          backgroundColor: isSorted ? SORTED_COLOR : '',
+          backgroundColor: isSorted && SORTED_COLOR,
         }}
       >{`${bit}`}</p>
     );
   }
-  console.log(ps);
   return ps;
 };
 

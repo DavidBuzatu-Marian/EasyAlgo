@@ -7,6 +7,24 @@
     font-size: 2rem;
   }
 
+  &-bits {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .array-binary {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      p {
+        flex-grow: 1;
+        text-align: center;
+        flex-basis: 0;
+      }
+    }
+  }
+
   .elements-bar {
     margin: 0 0.05rem;
   }
