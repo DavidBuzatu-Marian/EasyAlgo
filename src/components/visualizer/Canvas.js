@@ -8,6 +8,7 @@ import { animateQuickSort } from '../../hooks/quickSort';
 import { animateMergeSort } from '../../hooks/mergeSort';
 import { animateBubbleSort } from '../../hooks/bubbleSort';
 import { animateHeapSort } from '../../hooks/heapSort';
+import { animateInsertionSort } from '../../hooks/insertionSort';
 
 const Canvas = ({ animation, setAnimationState }) => {
   const [canvasState, setCanvasState] = useState({
@@ -30,7 +31,7 @@ const Canvas = ({ animation, setAnimationState }) => {
 
   useEffect(() => {
     if (elementsSize > 0) {
-      animateHeapSort(canvasState, setCanvasState, timeoutArr, animation);
+      animateInsertionSort(canvasState, setCanvasState, timeoutArr, animation);
     }
     // eslint-disable-next-line
   }, [elementsSize]);

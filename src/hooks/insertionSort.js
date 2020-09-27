@@ -1,9 +1,9 @@
 import store from '../store';
 import { setAnimationState } from '../actions/animation';
-import { getHeapSortAnimations } from '../algorithms/HeapSort';
+import { getInsertionSortAnimations } from '../algorithms/InsertionSort';
 import { animateBars } from './animateBars';
 
-export const animateHeapSort = (
+export const animateInsertionSort = (
   canvasState,
   setCanvasState,
   timeoutArr,
@@ -11,7 +11,7 @@ export const animateHeapSort = (
 ) => {
   const animationSpeed = animation.animationSpeed;
   const auxiliaryArray = animation.elements.slice();
-  const animations = getHeapSortAnimations(auxiliaryArray);
+  const animations = getInsertionSortAnimations(auxiliaryArray);
   store.dispatch(
     setAnimationState({
       animations,
