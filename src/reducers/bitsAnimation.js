@@ -1,24 +1,22 @@
-import { SET_ANIMATION_STATE } from '../actions/types';
-import { MERGE_SORT } from '../components/utils/Constants';
+import { SET_BITS_STATE } from '../actions/types';
+import { RADIX_SORT } from '../components/utils/Constants';
 
 const initialState = {
   animations: [],
   elements: [],
-  animationSpeed: 1,
+  animationSpeed: 100,
   isAnimated: false,
   isSorted: false,
   elementsSize: 0,
-  sortType: 1,
-  sortMethod: MERGE_SORT,
+  sortMethod: RADIX_SORT,
   start: false,
-  barWidth: 15,
 };
 
 export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case SET_ANIMATION_STATE:
+    case SET_BITS_STATE:
       return {
         ...state,
         ...payload,

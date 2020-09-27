@@ -8,6 +8,6 @@ export function initArr(elementsSize) {
   return elements;
 }
 
-function randomIntegerFromInterval(min, max) {
+export function randomIntegerFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }

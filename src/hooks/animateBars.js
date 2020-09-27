@@ -38,7 +38,7 @@ export const animateBars = (
           if (nrTimeout === animationsLength) {
             store.dispatch(
               setAnimationState({
-                isAnimating: false,
+                isAnimated: false,
                 elements: auxiliaryArray,
                 isSorted: true,
               })
@@ -65,7 +65,7 @@ export const animateBars = (
           if (nrTimeout === animationsLength) {
             store.dispatch(
               setAnimationState({
-                isAnimating: false,
+                isAnimated: false,
                 elements: auxiliaryArray,
                 isSorted: true,
               })

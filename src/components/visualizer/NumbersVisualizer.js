@@ -4,7 +4,7 @@ import Canvas from './Canvas';
 const NumbersVisualizer = () => {
   return (
     <div className='container'>
-      <Canvas></Canvas>;
+      <Canvas></Canvas>
     </div>
   );
 };
