@@ -77,10 +77,10 @@ const Table = ({ bitsAnimation, setBitsState }) => {
       ) : ( */}
       <div className='container'>
         <div className='row'>
-          <div className='col-6'>
+          <div className='table'>
             {elements.map((value, idx) => (
               <p
-                className={`array-binary text-center` + value}
+                className={`array-binary text-center ` + value}
                 key={idx}
                 name={value}
                 style={{
@@ -91,7 +91,7 @@ const Table = ({ bitsAnimation, setBitsState }) => {
               </p>
             ))}
           </div>
-          <div className='col-6'>
+          <div className='table'>
             <table className='table table-bordered table-dark'>
               <thead>
                 <tr>
