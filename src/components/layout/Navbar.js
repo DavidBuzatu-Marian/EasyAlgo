@@ -7,7 +7,7 @@ const Navbar = () => {
   const links = ['/', '/bits'];
 
   return (
-    <div className='navbar'>
+    <div className='col-2 navbar navbar-expand-md fixed-left'>
       <Controls></Controls>
       {sortingTypes.map((type, idx) => (
         <DropdownBox

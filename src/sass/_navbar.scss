@@ -63,7 +63,7 @@
         justify-content: space-between;
 
         &:disabled {
-          color: #dddddd;
+          background-color: #f2f2f2 !important;
         }
         &:hover {
           color: #333;
@@ -87,6 +87,9 @@
           background-color: #f2f2f2;
           border: none;
           &:hover {
+            background-color: #f2f2f2 !important;
+          }
+          &:disabled {
             background-color: #f2f2f2 !important;
           }
         }

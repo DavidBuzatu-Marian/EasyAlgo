@@ -4,10 +4,8 @@
 
 .container {
   display: flex;
-  flex: 2;
   min-height: 100%;
   height: 100vh;
-  margin: 0 1rem;
 
   .row {
     display: flex;
@@ -18,6 +16,7 @@
     .table {
       flex: 0 0 50%;
       max-width: 50%;
+      margin: 0 auto;
       .array-binary {
         flex-grow: 0;
         text-align: center;
