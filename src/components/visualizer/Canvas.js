@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { initArr } from '../../hooks/initArr';
 import { setAnimationState } from '../../actions/animation';
+import { SORTED_COLOR, PRIMARY_COLOR } from '../../hooks/colors';
+import { animateQuickSort } from '../../hooks/quickSort';
 
-const SORTED_COLOR = '#F2B591';
-const PRIMARY_COLOR = '#F58D79';
+const Canvas = ({ animation, setAnimationState }) => {
+  const [canvasState, setCanvasState] = useState({
+    timeoutArr: [],
+  });
 
-const Canvas = ({
-  animation: { elements, isSorted, barWidth },
-  setAnimationState,
-}) => {
+  const { elements, isSorted, barWidth, elementsSize } = animation;
+  const { timeoutArr } = canvasState;
+
   useEffect(() => {
     let elements = initArr(100);
 
@@ -21,6 +24,12 @@ const Canvas = ({
       elementsSize: 100,
     });
   }, [setAnimationState]);
+
+  useEffect(() => {
+    if (elementsSize > 0) {
+      animateQuickSort(canvasState, setCanvasState, timeoutArr, animation);
+    }
+  }, [elementsSize]);
 
   return elements.map((value, idx) => (
     <div

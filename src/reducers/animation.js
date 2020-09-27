@@ -3,7 +3,7 @@ import { SET_ANIMATION_STATE } from '../actions/types';
 const initialState = {
   animations: [],
   elements: [],
-  animationSpeed: 1,
+  animationSpeed: 10,
   isAnimating: false,
   isSorted: false,
   elementsSize: 0,
