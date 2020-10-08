@@ -1,0 +1,2 @@
+export const SET_ANIMATION_STATE = 'SET_ANIMATION_STATE';
+export const SET_BITS_STATE = 'SET_BITS_STATE';

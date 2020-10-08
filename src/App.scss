@@ -1,3 +1,6 @@
+@import './sass/general.scss';
+@import './sass/navbar';
+
 /* reset */
 * {
   box-sizing: border-box;
@@ -7,6 +10,7 @@
 html,
 body {
   min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -15,8 +19,9 @@ body {
   line-height: 1.6;
   background-color: #fafbff !important;
   color: #333;
-  overflow: auto;
+  overflow: hidden;
 }
+
 button {
   outline: none !important;
 }
