@@ -35,10 +35,20 @@ input {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
+  font-family: 'Baloo 2', cursive;
+  color: #00323d;
+
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+h2 {
+  font-size: 3.5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: 00323d;
+  color: #00323d;
 }
 
 a {

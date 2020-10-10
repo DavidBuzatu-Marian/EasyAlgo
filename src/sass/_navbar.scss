@@ -1,16 +1,22 @@
+@import './colors';
+
 .navbar {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  background-color: #f2f2f2;
+  width: 25rem;
+  font-family: 'Baloo 2', cursive;
+  background-color: $navbar-color;
+  text-align: center;
   // padding: 1rem;
 
   button {
     display: inline-block;
-    background: #37748c;
+    background-color: #37748c;
     color: #fff;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
     border-radius: 0.25rem;
     cursor: pointer;
     font-size: 1rem;
@@ -18,6 +24,9 @@
     outline: none;
     transition: all 0.2s ease-in;
     width: 100%;
+    img {
+      margin-right: 1rem;
+    }
 
     &:hover {
       background-color: #345259 !important;
@@ -40,7 +49,7 @@
   }
 
   &-dropdown {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-top: 1rem;
     width: 100%;
     text-align: start;
@@ -49,17 +58,21 @@
     &-content {
       display: flex;
       flex-direction: column;
-      background-color: #e0e0e0;
+
       button {
         cursor: pointer;
         font-size: 1.5rem;
+        background-color: $button-dropdown-content !important;
         border: none;
         background: none;
         text-align: start;
-        padding: 0.5 1rem;
+        font-weight: bold;
+        padding: 0.75rem 2rem;
         align-items: center;
-        color: #333;
-        width: 100%;
+        color: $text-color;
+        margin: 0.5rem 0 0;
+        width: 80%;
+        border-radius: 0 4rem 4rem 0;
         justify-content: space-between;
 
         &:disabled {
@@ -78,14 +91,19 @@
 
       a {
         button {
-          font-size: 1.75rem;
-          flex: 1;
+          font-size: 1.5rem;
           display: flex;
           padding: 0.5 1rem;
-          color: #333;
+          font-weight: bold;
+          color: $button-dropdown-header-text;
           text-transform: none;
-          background-color: #f2f2f2;
+          border-radius: 0 4rem 4rem 0;
+          background-color: rgba(0, 50, 61, 0.3);
           border: none;
+
+          &.active {
+            border-left: 0.75rem solid #00323d !important;
+          }
           &:hover {
             background-color: #f2f2f2 !important;
           }

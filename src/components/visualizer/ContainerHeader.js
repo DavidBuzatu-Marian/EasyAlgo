@@ -6,7 +6,7 @@ import Illustration from '../../images/undraw_visual_data_b1wx.svg';
 const ContainerHeader = ({ animation: { sortMethod } }) => {
   return (
     <div>
-      <h1>{sortMethod}</h1>
+      <h2>{sortMethod}</h2>
       <button className='btn btn-action'>Learn More</button>
       <img src={Illustration} alt='Illustration for data modeling' />
     </div>
