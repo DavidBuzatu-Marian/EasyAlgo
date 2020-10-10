@@ -60,13 +60,13 @@ const Canvas = ({ animation, setAnimationState }) => {
       }
     } else {
       clearAllTimeouts();
-      let elements = initArr(95);
+      let elements = initArr(60);
 
       setAnimationState({
         elements,
         isSorted: false,
         isAnimated: false,
-        elementsSize: 95,
+        elementsSize: 60,
       });
     }
     // eslint-disable-next-line
