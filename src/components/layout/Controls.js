@@ -12,7 +12,7 @@ const Controls = ({
   };
 
   return (
-    <div className='mb-3'>
+    <div className='mt-3'>
       <div className='form-group'>
         <label htmlFor='animationSpeed'>AnimationSpeed (in ms)</label>
         <input
@@ -24,16 +24,17 @@ const Controls = ({
           onChange={(e) => onChange(e)}
           disabled={isAnimated}
         />
-      </div>
 
-      <button
-        onClick={(e) =>
-          setAnimationState({ start: true, elementsSize: 0, animations: [] })
-        }
-        disabled={isAnimated}
-      >
-        Start sort
-      </button>
+        <button
+          className='mt-3'
+          onClick={(e) =>
+            setAnimationState({ start: true, elementsSize: 0, animations: [] })
+          }
+          disabled={isAnimated}
+        >
+          Start sort
+        </button>
+      </div>
     </div>
   );
 };
