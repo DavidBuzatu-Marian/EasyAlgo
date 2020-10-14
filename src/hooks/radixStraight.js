@@ -47,7 +47,7 @@ export const animateRadixStraightSort = (
             }
             let trOfKey = document.getElementById('row_' + key);
             let divOfNumber = document.getElementsByName(value)[0];
-            const color = i % 2 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
+            const color = i % 2 === 0 ? PRIMARY_COLOR : SECONDARY_COLOR;
 
             trOfKey.style.backgroundColor = color;
             divOfNumber.style.backgroundColor = color;

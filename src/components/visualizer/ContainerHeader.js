@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Illustration from '../../images/undraw_visual_data_b1wx.svg';
 
-const ContainerHeader = ({ animation: { sortMethod } }) => {
+const ContainerHeader = ({ animation: { sortMethod }, Illustration }) => {
   return (
     <div>
       <h2>{sortMethod}</h2>

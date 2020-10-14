@@ -97,6 +97,7 @@ const Table = ({ bitsAnimation, setBitsState }) => {
                 <tr>
                   <th scope='col'>Mask</th>
                   <th scope='col'>Numbers</th>
+                  <th scope='col'>Round</th>
                 </tr>
               </thead>
               <tbody>
