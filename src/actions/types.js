@@ -1,2 +1,3 @@
 export const SET_ANIMATION_STATE = 'SET_ANIMATION_STATE';
 export const SET_BITS_STATE = 'SET_BITS_STATE';
+export const SET_NAV_STATE = 'SET_NAV_STATE';
