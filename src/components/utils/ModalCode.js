@@ -1,7 +1,8 @@
 import React from 'react';
+import Gist from 'super-react-gist';
 
 const ModalCode = ({ code }) => {
-  return <div className='code-container'>{code}</div>;
+  return <Gist url={code} />;
 };
 
 export default ModalCode;

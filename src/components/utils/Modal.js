@@ -1,31 +1,32 @@
 import React from 'react';
-import { Illustration } from '../../images/undraw_reading_time_gvg0.svg';
+import Illustration from '../../images/undraw_reading_time_gvg0.svg';
 import ModalTitle from './ModalTitle';
 import ModalDescription from './ModalDescription';
 import ModalButtons from './ModalButtons';
+import ModalCode from './ModalCode';
 import PropTypes from 'prop-types';
-import { connect } from 'redux';
+import { connect } from 'react-redux';
 
-const Modal = ({ animation, bitsAnimation }) => {
+const Modal = ({
+  navbar: { activeMethod, activeDescription, activeCode, activeExtras },
+}) => {
   return (
     <div className='modal-container'>
-      <ModalTitle type={sortMethod}></ModalTitle>
-      <ModalDescription description={description}></ModalDescription>
-      <ModalCode code={code}></ModalCode>
+      <ModalTitle type={activeMethod}></ModalTitle>
+      <ModalDescription description={activeDescription}></ModalDescription>
+      <ModalCode code={activeCode}></ModalCode>
       <img src={Illustration} alt='Studying' />
-      <ModalButtons externals={externals}></ModalButtons>
+      <ModalButtons extras={activeExtras}></ModalButtons>
     </div>
   );
 };
 
 Modal.propTypes = {
-  animation: PropTypes.object.isRequired,
-  bitsAnimation: PropTypes.object.isRequired,
+  navbar: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  animation: state.animation,
-  bitsAnimation: state.bitsAnimation,
+  navbar: state.navbar,
 });
 
 export default connect(mapStateToProps)(Modal);

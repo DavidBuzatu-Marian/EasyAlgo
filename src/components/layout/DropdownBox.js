@@ -60,13 +60,13 @@ const DropdownBox = ({
                       sortMethod: menu,
                       elementsSize: 0,
                       animations: [],
-                      start: true,
+                      start: false,
                     })
                   : setBitsState({
                       sortMethod: menu,
                       elementsSize: 0,
                       animations: [],
-                      start: true,
+                      start: false,
                     });
                 setNavState({
                   activeCategory: sortingType,
