@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/EasyAlgo/static/css/main.1f78bd33.chunk.css",
+    "main.js": "/EasyAlgo/static/js/main.f9c2881b.chunk.js",
+    "main.js.map": "/EasyAlgo/static/js/main.f9c2881b.chunk.js.map",
+    "runtime-main.js": "/EasyAlgo/static/js/runtime-main.96876d12.js",
+    "runtime-main.js.map": "/EasyAlgo/static/js/runtime-main.96876d12.js.map",
+    "static/js/2.b81a7be8.chunk.js": "/EasyAlgo/static/js/2.b81a7be8.chunk.js",
+    "static/js/2.b81a7be8.chunk.js.map": "/EasyAlgo/static/js/2.b81a7be8.chunk.js.map",
+    "index.html": "/EasyAlgo/index.html",
+    "precache-manifest.67e0937cf8a14acddbe43819a022a417.js": "/EasyAlgo/precache-manifest.67e0937cf8a14acddbe43819a022a417.js",
+    "service-worker.js": "/EasyAlgo/service-worker.js",
+    "static/css/main.1f78bd33.chunk.css.map": "/EasyAlgo/static/css/main.1f78bd33.chunk.css.map",
+    "static/js/2.b81a7be8.chunk.js.LICENSE.txt": "/EasyAlgo/static/js/2.b81a7be8.chunk.js.LICENSE.txt",
+    "static/media/BinaryMenu.svg": "/EasyAlgo/static/media/BinaryMenu.d2c2149b.svg",
+    "static/media/NumbersMenu.svg": "/EasyAlgo/static/media/NumbersMenu.20f2b23d.svg",
+    "static/media/close.svg": "/EasyAlgo/static/media/close.50330cae.svg",
+    "static/media/undraw_reading_time_gvg0.svg": "/EasyAlgo/static/media/undraw_reading_time_gvg0.4235ed78.svg",
+    "static/media/undraw_sorting_thoughts_6d48.svg": "/EasyAlgo/static/media/undraw_sorting_thoughts_6d48.34d6b0b4.svg",
+    "static/media/undraw_visual_data_b1wx.svg": "/EasyAlgo/static/media/undraw_visual_data_b1wx.0370826f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.96876d12.js",
+    "static/js/2.b81a7be8.chunk.js",
+    "static/css/main.1f78bd33.chunk.css",
+    "static/js/main.f9c2881b.chunk.js"
+  ]
+}
