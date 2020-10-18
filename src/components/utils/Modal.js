@@ -1,5 +1,6 @@
 import React from 'react';
 import Illustration from '../../images/undraw_reading_time_gvg0.svg';
+import Close from '../../images/close.svg';
 import ModalTitle from './ModalTitle';
 import ModalDescription from './ModalDescription';
 import ModalButtons from './ModalButtons';
@@ -11,12 +12,17 @@ const Modal = ({
   navbar: { activeMethod, activeDescription, activeCode, activeExtras },
 }) => {
   return (
-    <div className='modal-container'>
-      <ModalTitle type={activeMethod}></ModalTitle>
-      <ModalDescription description={activeDescription}></ModalDescription>
-      <ModalCode code={activeCode}></ModalCode>
-      <img src={Illustration} alt='Studying' />
-      <ModalButtons extras={activeExtras}></ModalButtons>
+    <div className='modal'>
+      <div className='modal-container'>
+        <img className='close-img' src={Close} alt='Close' />
+        <ModalTitle type={activeMethod}></ModalTitle>
+        <ModalDescription description={activeDescription}></ModalDescription>
+        <ModalCode code={activeCode}></ModalCode>
+        <div className='modal-footer'>
+          <img src={Illustration} alt='Studying' />
+          <ModalButtons extras={activeExtras}></ModalButtons>
+        </div>
+      </div>
     </div>
   );
 };
