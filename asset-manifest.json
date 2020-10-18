@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/EasyAlgo/static/css/main.1f78bd33.chunk.css",
-    "main.js": "/EasyAlgo/static/js/main.c99e4dc8.chunk.js",
-    "main.js.map": "/EasyAlgo/static/js/main.c99e4dc8.chunk.js.map",
+    "main.js": "/EasyAlgo/static/js/main.8912c262.chunk.js",
+    "main.js.map": "/EasyAlgo/static/js/main.8912c262.chunk.js.map",
     "runtime-main.js": "/EasyAlgo/static/js/runtime-main.96876d12.js",
     "runtime-main.js.map": "/EasyAlgo/static/js/runtime-main.96876d12.js.map",
     "static/js/2.b81a7be8.chunk.js": "/EasyAlgo/static/js/2.b81a7be8.chunk.js",
     "static/js/2.b81a7be8.chunk.js.map": "/EasyAlgo/static/js/2.b81a7be8.chunk.js.map",
     "index.html": "/EasyAlgo/index.html",
-    "precache-manifest.b3b02027255177141bda70fade0b600d.js": "/EasyAlgo/precache-manifest.b3b02027255177141bda70fade0b600d.js",
+    "precache-manifest.426bf41db8fd63abba1ca0e71f8f7435.js": "/EasyAlgo/precache-manifest.426bf41db8fd63abba1ca0e71f8f7435.js",
     "service-worker.js": "/EasyAlgo/service-worker.js",
     "static/css/main.1f78bd33.chunk.css.map": "/EasyAlgo/static/css/main.1f78bd33.chunk.css.map",
     "static/js/2.b81a7be8.chunk.js.LICENSE.txt": "/EasyAlgo/static/js/2.b81a7be8.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.96876d12.js",
     "static/js/2.b81a7be8.chunk.js",
     "static/css/main.1f78bd33.chunk.css",
-    "static/js/main.c99e4dc8.chunk.js"
+    "static/js/main.8912c262.chunk.js"
   ]
 }
