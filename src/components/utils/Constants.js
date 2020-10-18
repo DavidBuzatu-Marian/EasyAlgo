@@ -116,7 +116,7 @@ export const subMenusMore = {
   ],
   1: [
     {
-      activeDescription: RADIX_STRAIGHT_CODE,
+      activeDescription: RADIX_STRAIGHT_DESCRIPTION,
       activeExtras: radix_straight_extras,
       activeCode: RADIX_STRAIGHT_CODE,
     },
