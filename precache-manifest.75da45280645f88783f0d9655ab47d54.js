@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62952901d2b295354dc3f158a209b5f3",
+    "revision": "7e7b4f3ebfd5221a8d9c083f3692aea5",
     "url": "/EasyAlgo/index.html"
   },
   {
-    "revision": "33a3429d0ca106b77c02",
+    "revision": "efb1bfbad9cabd8d3fef",
     "url": "/EasyAlgo/static/css/main.1f78bd33.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EasyAlgo/static/js/2.80d08a5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33a3429d0ca106b77c02",
-    "url": "/EasyAlgo/static/js/main.1b163b1c.chunk.js"
+    "revision": "efb1bfbad9cabd8d3fef",
+    "url": "/EasyAlgo/static/js/main.0502ecd2.chunk.js"
   },
   {
     "revision": "d0551a71264c2ac1b3a0",
