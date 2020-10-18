@@ -52,32 +52,34 @@ const DropdownBox = ({
       {toggle && (
         <div className='navbar-dropdown-content'>
           {submenu.map((menu, idx) => (
-            <button
-              disabled={isAnimated || bitsAnimation.isAnimated}
-              key={idx}
-              onClick={(e) => {
-                sortingType !== BINARY_TYPE
-                  ? setAnimationState({
-                      sortMethod: menu,
-                      elementsSize: 0,
-                      animations: [],
-                      start: false,
-                    })
-                  : setBitsState({
-                      sortMethod: menu,
-                      elementsSize: 0,
-                      animations: [],
-                      start: false,
-                    });
-                setNavState({
-                  activeCategory: sortingType,
-                  activeMethod: menu,
-                  ...submenuMore[idx],
-                });
-              }}
-            >
-              {menu}
-            </button>
+            <Link to={link}>
+              <button
+                disabled={isAnimated || bitsAnimation.isAnimated}
+                key={idx}
+                onClick={(e) => {
+                  sortingType !== BINARY_TYPE
+                    ? setAnimationState({
+                        sortMethod: menu,
+                        elementsSize: 0,
+                        animations: [],
+                        start: false,
+                      })
+                    : setBitsState({
+                        sortMethod: menu,
+                        elementsSize: 0,
+                        animations: [],
+                        start: false,
+                      });
+                  setNavState({
+                    activeCategory: sortingType,
+                    activeMethod: menu,
+                    ...submenuMore[idx],
+                  });
+                }}
+              >
+                {menu}
+              </button>
+            </Link>
           ))}
         </div>
       )}
