@@ -1,7 +1,7 @@
 import React from 'react';
 import DropdownBox from './DropdownBox';
 import Controls from './Controls';
-import { sortingTypes, subMenus } from '../utils/Constants';
+import { sortingTypes, subMenus, subMenusMore } from '../utils/Constants';
 import Title from './Title';
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
           link={links[idx]}
           sortingType={type}
           submenu={subMenus[idx]}
+          submenuMore={subMenusMore[idx]}
         />
       ))}
       <Controls></Controls>

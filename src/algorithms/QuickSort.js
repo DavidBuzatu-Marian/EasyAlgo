@@ -2,7 +2,7 @@ import { swap } from './Utils';
 
 export const getQuickSortAnimations = (array) => {
   const animations = [];
-  if (array.lenght < 1) {
+  if (array.length < 1) {
     return array;
   }
   quickSort(array, animations, 0, array.length - 1);

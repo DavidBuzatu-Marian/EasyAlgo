@@ -4,7 +4,6 @@ export const getRadixStraightAnimations = (array) => {
     return array;
   }
   radixStraight(array, array.length, animations);
-  console.log(array);
   return animations;
 };
 

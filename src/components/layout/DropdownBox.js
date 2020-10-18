@@ -13,6 +13,7 @@ const DropdownBox = ({
   link,
   sortingType,
   submenu,
+  submenuMore,
   setAnimationState,
   animation: { isAnimated },
   setBitsState,
@@ -71,6 +72,7 @@ const DropdownBox = ({
                 setNavState({
                   activeCategory: sortingType,
                   activeMethod: menu,
+                  ...submenuMore[idx],
                 });
               }}
             >
@@ -91,6 +93,7 @@ DropdownBox.propTypes = {
   animation: PropTypes.object.isRequired,
   bitsAnimation: PropTypes.object.isRequired,
   setNavState: PropTypes.func.isRequired,
+  submenuMore: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
