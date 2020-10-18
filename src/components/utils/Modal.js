@@ -9,12 +9,18 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Modal = ({
+  setState,
   navbar: { activeMethod, activeDescription, activeCode, activeExtras },
 }) => {
   return (
     <div className='modal'>
       <div className='modal-container'>
-        <img className='close-img' src={Close} alt='Close' />
+        <img
+          className='close-img'
+          src={Close}
+          alt='Close'
+          onClick={(e) => setState({ toggle: false })}
+        />
         <ModalTitle type={activeMethod}></ModalTitle>
         <ModalDescription description={activeDescription}></ModalDescription>
         <ModalCode code={activeCode}></ModalCode>
